@@ -4,8 +4,8 @@ from ..database import get_db
 from .. import models, schemas, database, oauth2
 from sqlalchemy import func
 
-connection = database.connection
-cursor = database.cursor
+# connection = database.connection
+# cursor = database.cursor
 
 router = APIRouter(
     prefix="/posts",
