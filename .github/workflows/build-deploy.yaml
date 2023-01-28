@@ -67,4 +67,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/python-api-dev:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-api-dev:latest
