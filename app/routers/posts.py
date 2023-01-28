@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from ..database import get_db
 from .. import models, schemas, database, oauth2
 from sqlalchemy import func
+from typing import Optional
 
 # connection = database.connection
 # cursor = database.cursor
@@ -26,7 +27,7 @@ def get_posts(db: Session = Depends(get_db),
               current_user: schemas.UserOut = Depends(oauth2.get_current_user),
               limit: int = 10,
               skip: int = 0,
-              search: str | None = "",
+              search: Optional[str] = "",
               ):
     # cursor.execute("""SELECT * FROM posts;""")
     # posts = cursor.fetchall()
