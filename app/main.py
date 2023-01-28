@@ -26,4 +26,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "Welcome to my api pal"}
+    return {"message": "Welcome to my api pal"}
